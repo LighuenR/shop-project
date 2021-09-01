@@ -6,7 +6,7 @@ const getProducts = async(req, res, next) => {
 }
 
 const addProduct = async(req, res, next) => {
-    const newProduct = new ProductModel(req.body)
+    const newProduct = await new ProductModel(req.body)
     try {
         const product = await newProduct.save()
         res.status(201).json(product)
