@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-const productControler = require("../controllers/productsControllers");
+const productController = require("../controllers/productsControllers");
 
 router.route("/")
-    .get(productControler.getProducts)
-    .post(productControler.addProduct)
+    .get(productController.getProducts)
+    .post(productController.addProduct)
 
 
 module.exports = router;

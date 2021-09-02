@@ -4,10 +4,13 @@ const app = express();
 const mongoose = require("mongoose");
 const { MONGODB, PORT } = require("./config")
 const productRoutes = require("./routes/productsRoutes")
+const userRoutes = require("./routes/userRoutes")
 
 app.use(cors());
 app.use(express.json())
 app.use("/api/products", productRoutes)
+app.use("/api/users", userRoutes)
+
 
 mongoose.connect(MONGODB, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
