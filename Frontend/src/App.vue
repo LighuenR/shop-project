@@ -1,15 +1,21 @@
 <template>
   <v-app>
-    <v-app-bar app>
-      <h1>Tiendita</h1>
-    </v-app-bar>
+    <Header />
+
     <router-view></router-view>
     
   </v-app>
 </template>
 
 <script>
+import Header from "./components/layout/Header.vue"
 
+export default {
+  components: {
+        Header,
+        
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -1,23 +1,21 @@
 <template>
   <div class="home">
-    <h1>Productos</h1>
-    <v-row>
-      <v-col v-for="product in products" :key="product._id">
-        <h1> 
-          {{product.name}}
-        </h1>
-
-      </v-col>
-    </v-row>
+     
+    <Banner/>
+  
   </div>
  
 
 </template>
 
 <script>
+ import Banner from "../components/Home/Banner.vue"
  import { getProducts} from "../services/product";
 export default {
   name: 'Home',
+  components: {
+    Banner
+  },
 
   data() {
     return {
