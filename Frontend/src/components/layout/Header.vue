@@ -28,18 +28,26 @@
 
     <v-navigation-drawer
       class="drawer"
+      dark
       v-model="drawer"
       app
-      dark
       right
     >
-      <h1 class="pl-3 pt-2">Your Cart</h1>
+    <v-container>
+     <h2>Your Card</h2>
+
+      <v-divider></v-divider>
+    <v-card>
       <h3>Crazy leggins</h3>
       <h5>Amount: 2</h5>
       <h4>Price: $80</h4>
       <b-btn><v-icon>mdi-delete</v-icon></b-btn>
+      </v-card>
 
-      <h2>Total: $160</h2>
+      <h3>Total: $160</h3>
+      </v-container>
+    
+
     </v-navigation-drawer>
   </header>
 </template>
@@ -56,6 +64,7 @@ export default {
 
 <style lang="scss" scoped>
 .drawer {
-  color: white;
+ color: white;
 }
+
 </style>
