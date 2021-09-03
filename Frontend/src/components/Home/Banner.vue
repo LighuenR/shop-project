@@ -13,6 +13,7 @@
 <style lang="scss" scoped>
 .banner-section {
    background: url("../../assets/banner3.jpg");
+   width: 100%;
    min-height: 70vh;
    background-size: cover;
    background-attachment: fixed;

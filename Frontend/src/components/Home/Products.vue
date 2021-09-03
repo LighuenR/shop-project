@@ -1,5 +1,5 @@
 !<template>
-  <v-container>
+  <v-container class="my-2">
     <h1 class="my-2">Products</h1>
     <v-row>
       <v-col cols="3">
