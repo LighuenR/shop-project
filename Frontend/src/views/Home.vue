@@ -2,6 +2,7 @@
   <div class="home">
      
     <Banner/>
+    <Products/>
   
   </div>
  
@@ -10,11 +11,13 @@
 
 <script>
  import Banner from "../components/Home/Banner.vue"
+ import Products from "../components/Home/Products.vue"
  import { getProducts} from "../services/product";
 export default {
   name: 'Home',
   components: {
-    Banner
+    Banner,
+    Products,
   },
 
   data() {
