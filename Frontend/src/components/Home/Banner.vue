@@ -12,7 +12,7 @@
 
 <style lang="scss" scoped>
 .banner-section {
-   background: url("../../assets/banner.jpg");
+   background: url("../../assets/banner3.jpg");
    min-height: 70vh;
    background-size: cover;
    background-attachment: fixed;

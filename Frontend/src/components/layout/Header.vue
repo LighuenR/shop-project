@@ -1,5 +1,6 @@
 !<template>
-    <v-app-bar app dark dense>
+<header>
+    <v-app-bar app dense dark>
 
     <v-container class="d-flex align-center">
      
@@ -24,21 +25,34 @@
       </v-list>
 
     </v-menu>
-
       
-       <v-btn icon>
-        <v-icon>mdi-cart</v-icon>
-      </v-btn>
+    <v-btn icon @click.stop="drawer = !drawer">  <v-icon>mdi-cart</v-icon></v-btn>   
+      
+    
 
       </v-container>
 
     </v-app-bar>
     
+          <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      app
+      right
+      temporary
+    >
+    
+    </v-navigation-drawer>
+    </header>
 </template>
 
 <script>
     export default {
-        
+        data() {
+          return {
+            drawer: false
+          }
+        },
     }
 </script>
 
