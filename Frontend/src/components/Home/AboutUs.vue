@@ -4,7 +4,7 @@
       <v-row class="">
         <v-col cols="7"></v-col>
         <v-col cols="5">
-          <h1>Who we are?</h1>
+          <h1 class="mb-3">Who we are?</h1>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
             explicabo harum magnam quis suscipit impedit possimus debitis ab
