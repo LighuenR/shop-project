@@ -42,7 +42,7 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn color="deep-purple lighten-2" text @click="reserve">
+            <v-btn class="btn-color" text @click="reserve">
               Add to cart
             </v-btn>
           </v-card-actions>
@@ -88,7 +88,7 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn color="deep-purple lighten-2" text @click="reserve">
+            <v-btn class="btn-color" text @click="reserve">
               Add to cart
             </v-btn>
           </v-card-actions>
@@ -134,7 +134,7 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn color="deep-purple lighten-2" text @click="reserve">
+            <v-btn class="btn-color" text @click="reserve">
               Add to cart
             </v-btn>
           </v-card-actions>
@@ -180,7 +180,7 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn color="deep-purple lighten-2" text @click="reserve">
+            <v-btn class="btn-color" text @click="reserve">
               Add to cart
             </v-btn>
           </v-card-actions>
@@ -196,4 +196,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+.btn-color {
+  color: #275660;
+}
 </style>
