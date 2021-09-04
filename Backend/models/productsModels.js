@@ -12,7 +12,6 @@ const productSchema = new Schema({
         type:String,
         required:true
         
-        
     },
     "price":{
         type:String, 
@@ -30,6 +29,11 @@ const productSchema = new Schema({
        type:Number,
        required:true
     
+   },
+   "size": {
+        type:String, 
+        required:true,
+        default: "S"
    }
 });
 

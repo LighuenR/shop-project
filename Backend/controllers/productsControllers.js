@@ -15,7 +15,20 @@ const addProduct = async(req, res, next) => {
     }
 }
 
+const deleteProduct = async (req, res, next) => {
+    const productId = req.params;
+    try {
+        await Task.findByIdAndRemove(productId);
+        res.status(200).json({ success: true });
+        
+    } catch(error) {
+        error.status = 400;
+        next(error);
+    }
+};
+
 module.exports = {
     getProducts,
     addProduct,
+    deleteProduct,
 }
