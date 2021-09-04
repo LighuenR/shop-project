@@ -15,6 +15,7 @@
  import Products from "../components/Home/Products.vue"
  import AboutUs from "../components/Home/AboutUs.vue"
  import { getProducts} from "../services/product";
+ /* import { deleteProduct } from "../services/product" */
 export default {
   name: 'Home',
   components: {
@@ -47,5 +48,10 @@ export default {
       this.taskDescription = "";
     }, */
   },
+
+  /* async deleteProduct(product) {
+      await deleteTask(product);
+      this.getAllProducts();
+    }, */
 }
 </script>

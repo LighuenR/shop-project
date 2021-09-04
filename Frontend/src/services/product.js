@@ -26,3 +26,15 @@ export const getProducts = () => {
         console.log(error);
       });
   };
+
+  export const deleteProduct = (product) => {
+    return ajax
+      .delete(apiURL + `/${product._id}`)
+      .then(res => {
+        console.log(res)
+        return res.data;
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
