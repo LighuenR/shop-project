@@ -25,15 +25,11 @@ const productSchema = new Schema({
        required:true,
        default: "Sin imagen"
    },
-   "stock":{
-       type:Number,
-       required:true
-    
-   },
-   "size": {
-        type:String, 
-        required:true,
-        default: "S"
+  
+   "sizes": {
+        type:Array, 
+        default: ["S","M","L","XL","XXL"]
+
    }
 });
 
