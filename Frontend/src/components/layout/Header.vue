@@ -45,28 +45,9 @@
       <v-card
     class="mx-auto"
   
-    outlined
+    outlined v-for="(product, i) in cartProducts"  :key="i"
   >
-    <v-list-item three-line>
-      <v-list-item-content>
-       
-        <v-list-item-title class="text-h5 mb-1">
-          Calza
-        </v-list-item-title>
-        <v-list-item-subtitle>Lorem ipsum dolor sit amet consectetur adipisicing elit.</v-list-item-subtitle>
-      </v-list-item-content>
-     
-      <v-list-item-avatar
-        tile
-        size="80"
-        >
-        <v-img
-          src="../../assets/Products/1.jpg"
-        >
-        </v-img>
-
-      </v-list-item-avatar>
-    </v-list-item>
+   <v-card-text>{{product.name}}</v-card-text>
 
     <v-card-actions>
       <v-btn
@@ -89,12 +70,16 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 export default {
   data() {
     return {
       drawer: false,
     };
   },
+  computed:{
+    ...mapGetters(["cartProducts"])
+  }
 };
 </script>
 

@@ -36,7 +36,7 @@
           </v-card-text>
 
           <v-card-actions>
-            <v-btn class="btn-color" text @click="reserve">
+            <v-btn class="btn-color" text @click="addProductToCart(product)">
               Add to cart
             </v-btn>
           </v-card-actions>
@@ -65,6 +65,11 @@ export default {
       this.products = await getProducts();
       console.log(this.products);
     },
+
+    addProductToCart(product){
+      console.log(product)
+      this.$store.commit("ADD_PRODUCT_TO_CART", product)
+    }
    
 
    }};
@@ -77,6 +82,6 @@ export default {
 .product-img {
   max-width: 100%;
   width: 100%;
-  
+
 }
 </style>
