@@ -1,6 +1,6 @@
 !<template>
   <div>
-    <v-footer dark padless>
+    <v-footer dark padless class="footer">
       <v-card class="flex">
           <v-card-text class="back text-center">
           <h2> Keep conected with us!</h2>
@@ -47,6 +47,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+
 .back {
     background-color:#275660 ;
    
