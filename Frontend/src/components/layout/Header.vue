@@ -36,18 +36,30 @@
      <h2 class="pa-2">Your Cart</h2>
 
       <v-divider></v-divider>
-   <!--  <v-card>
-      <h3>Crazy leggins</h3>
-      <h5>Amount: 2</h5>
-      <h4>Price: $80</h4>
-      <b-btn><v-icon>mdi-delete</v-icon></b-btn>
-      </v-card> -->
+  
       <v-card
     class="mx-auto"
   
     outlined v-for="(product, i) in cartProducts"  :key="i"
   >
-   <v-card-text>{{product.name}}</v-card-text>
+
+ <v-list-item three-line>
+      <v-list-item-content>
+        <v-list-item-title class="text-h7 mb-1">
+          {{product.name}}
+        </v-list-item-title>
+        <v-list-item-subtitle>{{product.description}}</v-list-item-subtitle>
+      </v-list-item-content>
+
+      <v-list-item-avatar
+        tile
+        size="80"
+      
+      >
+      <v-img :src="'img/'+(i+1)+'.jpg'"></v-img>
+      </v-list-item-avatar>
+
+    </v-list-item>
 
     <v-card-actions>
       <v-btn
@@ -55,9 +67,12 @@
         rounded
         text
       >
-        <v-icon>mdi-delete</v-icon>Delete</v-btn>
-        <h3 class="ma-auto">$100</h3>
+        Remove
+      </v-btn>
+      <h4 class="ml-4">Price: {{product.price}}</h4>
     </v-card-actions>
+      
+  
   </v-card>
 
 
