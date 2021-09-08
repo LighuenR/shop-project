@@ -18,7 +18,7 @@ const addProduct = async(req, res, next) => {
 const deleteProduct = async (req, res, next) => {
     const productId = req.params;
     try {
-        await Task.findByIdAndRemove(productId);
+        await ProductModel.findByIdAndRemove(productId);
         res.status(200).json({ success: true });
         
     } catch(error) {
@@ -26,9 +26,33 @@ const deleteProduct = async (req, res, next) => {
         next(error);
     }
 };
+const putProduct = async (req, res, next) => {
+    const productId = req.body._id;
+    const newProduct = req.body;
+    try {
+        await ProductModel.findByIdAndUpdate(productId, newProduct);
+        res.status(200).json({ success: true });
+        
+    } catch(error) {
+        error.status = 400;
+        next(error);
+    }
+};
+const getProductById = async(req, res, next) => {
+    const productId = req.body._id
+    try {
+        await Product.findById(taskId);
+        res.status(200).json({ success: true });
+    } catch(error) {
+        error.status = 400;
+        next(error)
+    }
+}
 
 module.exports = {
     getProducts,
     addProduct,
     deleteProduct,
+    putProduct,
+    getProductById
 }
