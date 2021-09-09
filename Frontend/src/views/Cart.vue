@@ -9,7 +9,7 @@
 <script>
  import Cart from "../components/Cart/Cart"
   export default {
-    name: 'About',
+   
     components: {
       Cart
     }
