@@ -14,8 +14,8 @@
           </template>
 
           <v-list>
-            <v-list-item>Logout</v-list-item>
-            <v-list-item>Logout</v-list-item>
+            <v-list-item>Register</v-list-item>
+            <v-list-item>Login</v-list-item>
             <v-list-item>Logout</v-list-item>
           </v-list>
         </v-menu>

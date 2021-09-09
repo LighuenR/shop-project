@@ -1,10 +1,12 @@
 !<template>
     <div class="container">
-        <v-card>
+        <v-card  class="mx-auto main-card glass pa-4 mt-2 d-grid"
+      max-width="400"
+      width="100%">
           <v-card-title>
-           Create account
+           Create an account
           </v-card-title>
- <v-form
+ <v-form 
     ref="form"
       class="pa-4"
  
@@ -52,6 +54,7 @@
     <v-btn
       color="#275660"
       dark
+      block
     >
       Register
     </v-btn>
@@ -77,7 +80,7 @@
 
 <style lang="scss" scoped>
 .container {
-    padding:75px 0 300px 0;
+    padding:100px 0 50px 0;
 }
 
 </style>
