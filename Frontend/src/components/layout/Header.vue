@@ -56,7 +56,7 @@
         size="80"
       
       >
-      <v-img :src="'img/'+(i+1)+'.jpg'"></v-img>
+      <v-img :src="product.img"></v-img>
       </v-list-item-avatar>
 
     </v-list-item>
@@ -69,7 +69,7 @@
       >
         Remove
       </v-btn>
-      <h4 class="ml-4">Price: {{product.price}}</h4>
+      <h4 class="ml-4">Price: ${{product.price}}</h4>
     </v-card-actions>
       
   

@@ -2,7 +2,7 @@
   <v-container class="my-2">
     <h1 class="my-2">Products</h1>
     <v-row>
-      <v-col cols="3" v-for="(product, i) in products" :key="product._id">
+      <v-col cols="3" v-for="(product) in products" :key="product._id">
         <v-card :loading="loading" max-width="374">
           <template slot="progress">
             <v-progress-linear
@@ -12,13 +12,14 @@
             ></v-progress-linear>
           </template>
 
-          <img class="product-img" :src="'img/'+(i+1)+'.jpg'">
+         <!--  <img class="product-img" :src="'img/'+(i+1)+'.jpg'"> -->
+          <img class="product-img" :src="product.img">
 
           <v-card-title>{{product.name}}</v-card-title>
 
           <v-card-text>
             <div class="mb-1 text-subtitle-1">
-              <h3>Price:<strong> {{product.price}}</strong></h3>
+              <h3>Price:<strong> ${{product.price}}</strong></h3>
             </div>
 
             <div>
