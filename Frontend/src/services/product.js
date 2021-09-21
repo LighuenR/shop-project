@@ -38,3 +38,15 @@ export const getProducts = () => {
         console.log(error);
       });
   };
+
+  export const putPorduct = (product) => {
+    return ajax
+      .put(apiURL + `/${product._id}`, product)
+      .then(res => {
+        console.log(res)
+        return res.data;
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
