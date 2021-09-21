@@ -14,7 +14,7 @@
                   label="Description"
                   v-model="productDescription"
                 ></v-textarea>
-                <v-btn dark color="black" block @click="addProduct()"
+                <v-btn color="#275660" dark block @click="addProduct()"
                   >Send</v-btn
                 >
               </v-card-text>
@@ -27,10 +27,10 @@
                 ><v-card  justify="space-around">
                   <v-card-title>{{ product.name }}</v-card-title>
                   <v-card-text>{{ product.description }}</v-card-text>
-                  <v-card-subtitle>{{product.price}}</v-card-subtitle>
+                  <v-card-text>{{product.price}}</v-card-text>
                   <v-card-text>{{ product.img }}</v-card-text>
 
-                  <v-divider class="mx-4"></v-divider>
+                 
                   <v-card-actions class="d-flex justify-end">
                   <v-btn
                     elevation="2"
@@ -109,8 +109,6 @@ import { getProducts , deleteProduct, addProduct} from "../../services/product";
 .container {
     padding:75px 0 230px 0;
 }
-.btn-color {
-  color: #275660;
-}
+
 
 </style>
