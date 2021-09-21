@@ -33,7 +33,13 @@ const routes = [
     path: '/dashboard',
     name: 'Dashboard',
     component: () => import(/* webpackChunkName: "register" */ '../views/Dashboard.vue')
-  }
+  },
+  
+  {
+    path: '/admin',
+    name: 'Crud',
+    component: () => import(/* webpackChunkName: "register" */ '../views/Crud.vue')
+  },
 ]
 
 const router = new VueRouter({
