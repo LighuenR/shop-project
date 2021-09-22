@@ -145,7 +145,8 @@ import { getProducts , deleteProduct, addProduct, putProduct} from "../../servic
 
     editDialogf(product) {
       this.editDialog = true;
-      this.editName = product.Name;
+      this.editName = product.name;
+      this.editPrice = product.price;
       this.editDescription = product.description;
       this.editImg = product.img;
       this.editId = product._id;
