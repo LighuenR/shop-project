@@ -33,6 +33,7 @@
                  
                   <v-card-actions class="d-flex justify-end">
                   <v-btn
+                  @click="editDialogf(product)"
                     elevation="2"
                     class="ma-2"
                     justify="end"
@@ -59,11 +60,29 @@
             </v-row>
           </v-col>
         </v-row>
+
+        <v-dialog v-model="editDialog" max-width="500">
+      <v-card>
+        <v-card-title>Product id: {{ editId }} </v-card-title>
+        <v-card-text>
+          <v-text-field label="Edit Name" v-model="editName"></v-text-field>
+          <v-text-field label="Edit Price" v-model="editPrice"></v-text-field>
+          <v-text-field label="Edit Img" v-model="editImg"></v-text-field>
+
+          <v-text-field
+            v-model="editDescription"
+            label="Edit description"
+          ></v-text-field>
+          <v-btn dark color="blue" block @click="editProduct()">Update</v-btn>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
+
  </v-container>
 </template>
 
 <script>
-import { getProducts , deleteProduct, addProduct} from "../../services/product";
+import { getProducts , deleteProduct, addProduct, putProduct} from "../../services/product";
     export default {
            data() {
       return {
@@ -71,7 +90,13 @@ import { getProducts , deleteProduct, addProduct} from "../../services/product";
         productName: "",
         productDescription: "",
         productPrice: "",
-        productImg: ""
+        productImg: "",
+        editDialog: false,
+        editName: "",
+        editPrice: "",
+        editDescription: "",
+        editImg: "",
+        editId: ""
       }
     },
    created() {
@@ -102,7 +127,32 @@ import { getProducts , deleteProduct, addProduct} from "../../services/product";
       await deleteProduct(product);
       this.getProducts();
     },
-    }}
+
+     async editProduct() {
+      const res = await putProduct({
+        name: this.editName,
+        price: this.editPrice,
+        description: this.editDescription,
+        img: this.editImg,
+        
+      });
+      if (res) {
+        console.log("Entro sabroson");
+        this.getProducts();
+        this.editDialog = false;
+      } else console.log("No se pudo editar");
+    },
+
+    editDialogf(product) {
+      this.editDialog = true;
+      this.editName = product.Name;
+      this.editDescription = product.description;
+      this.editImg = product.img;
+      this.editId = product._id;
+
+    },
+  },
+    }
 </script>
 
 <style lang="scss" scoped>
