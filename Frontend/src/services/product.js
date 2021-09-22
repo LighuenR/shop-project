@@ -39,7 +39,7 @@ export const getProducts = () => {
       });
   };
 
-  export const putPorduct = (product) => {
+  export const putProduct = (product) => {
     return ajax
       .put(apiURL + `/${product._id}`, product)
       .then(res => {
