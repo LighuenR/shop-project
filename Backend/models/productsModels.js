@@ -14,9 +14,9 @@ const productSchema = new Schema({
         
     },
     "price":{
-        type:String, 
+        type:Number, 
         required:true,
-        default: "Muy barato"
+        default: 0
        
         
     },

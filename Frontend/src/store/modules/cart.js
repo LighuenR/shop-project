@@ -11,7 +11,10 @@ export default {
     actions: {
     },
     getters: {
-        cartProducts: state => state.products
+        cartProducts: state => state.products,
+        cartTotal: state => state.products.reduce((acc, elem) => {
+            return acc += elem.price
+        }, 0)
     },
     modules: {
     }
