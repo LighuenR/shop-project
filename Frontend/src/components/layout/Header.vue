@@ -76,7 +76,7 @@
   </v-card>
 
 
-      <h3 class="pa-2">Total: $160</h3>
+      <h3 class="pa-2">Total: ${{cartTotal}}</h3>
       </v-container>
     
 
@@ -93,8 +93,9 @@ export default {
     };
   },
   computed:{
-    ...mapGetters(["cartProducts"])
-  }
+    ...mapGetters(["cartProducts", "cartTotal"])
+  },
+  
 };
 </script>
 
