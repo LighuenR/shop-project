@@ -49,8 +49,8 @@
 </template>
 
 <script>
-  import { getProducts} from "../../services/product";
-
+ /*  import { getProducts} from "../../services/product"; */
+ 
 
 export default {
    data() {
@@ -63,9 +63,18 @@ export default {
   },
    methods: {
     async getProducts() {
-      this.products = await getProducts();
-      console.log(this.products);
+    /*   this.products = await getProducts();
+      console.log(this.products); */
+
+      fetch("/data.json")
+        .then(res => res.json()) 
+        .then(data => {
+          console.log(data)
+          this.products = data;
+        })
+        
     },
+
 
     addProductToCart(product){
       console.log(product)

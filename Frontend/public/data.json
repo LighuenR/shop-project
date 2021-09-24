@@ -1,0 +1,45 @@
+[{
+    "_id": {
+        "$oid": "6149dbc66f15cced29f38143"
+    },
+    "name": "Zapatillas blancas",
+    "description": "Unas zapatillas blancas como la nieve que te haran sentir que no necesitas mas para ser feliz que un paseo",
+    "price": 500,
+    "img": "https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "6149e0136f15cced29f3814d"
+    },
+    "name": "Vaqueros Azules",
+    "description": "Unos vaqueros azules tan comodos como usar calzas. No tendras frio ni calor en ninguna epoca del año",
+    "price": 1400,
+    "img": "https://images.pexels.com/photos/4602025/pexels-photo-4602025.jpeg?cs=srgb&dl=pexels-anne-r-4602025.jpg&fm=jpg",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "6149e0f96f15cced29f38152"
+    },
+    "name": "Vestido de moda",
+    "description": "Vestido rosa como los que se usaban antes con mucho detalle y elegancia la de francia",
+    "price": 450,
+    "img": "https://images.pexels.com/photos/5693889/pexels-photo-5693889.jpeg?cs=srgb&dl=pexels-%C4%91%E1%BA%B7ng-thanh-t%C3%BA-5693889.jpg&fm=jpg",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "6149e1f16f15cced29f38157"
+    },
+    "name": "Cartera con estilo",
+    "description": "Cartera pequeña de cuero de tigre albino. Cazados con arco y flecha en combate uno contra uno",
+    "price": 790,
+    "img": "https://images.pexels.com/photos/3808229/pexels-photo-3808229.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "__v": 0
+}
+]
