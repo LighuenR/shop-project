@@ -66,6 +66,7 @@
         outlined
         rounded
         text
+        @click="$store.dispatch('REMOVE_PRODUCT_FROM_CART', product._id)"
       >
         Remove
       </v-btn>
