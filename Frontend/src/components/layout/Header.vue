@@ -14,9 +14,11 @@
           </template>
 
           <v-list>
-            <v-list-item>Register</v-list-item>
-            <v-list-item>Login</v-list-item>
-            <v-list-item>Logout</v-list-item>
+            <v-list-item> <a href="/"> Home </a></v-list-item>
+            <v-list-item> <a href="/register"> Register </a></v-list-item>
+            <v-list-item> <a href="/login">Login </a> </v-list-item>
+            <v-list-item><a href="/cart"> Your cart </a></v-list-item>
+            <v-list-item><a href="/admin"> Admin </a></v-list-item>
           </v-list>
         </v-menu>
 
@@ -103,6 +105,9 @@ export default {
 <style lang="scss" scoped>
 .drawer {
  /* color: white; */
+}
+a {
+  text-decoration: none;
 }
 
 </style>
